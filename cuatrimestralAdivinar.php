@@ -39,18 +39,18 @@ class Juego {
  }
  $this->rondas++;
  }
- return $this->ganador . ' El partido terminó en ' . $this->rondas . " rondas.\n";
+ return $this->ganador;
  }
  protected function hayGanador($numSecreto, $num1, $num2) {
  if ($num1 == $numSecreto || $num2 == $numSecreto) {
  if ($num1 == $num2) {
- $this->ganador = 'Ambos jugadores empataron.';
+ return $this->ganador = 'Ambos jugadores empataron.';
  }
  elseif ($num1 == $numSecreto) {
- $this->ganador = 'Ganó el jugador 1.';
+ return $this->ganador = 'Ganó el jugador 1.';
  }
  else {
- $this->ganador = 'Ganó el jugador 2.';
+ return $this->ganador = 'Ganó el jugador 2.';
  }
  return true; // Alguno de los jugadores acertó, devolvemos true.
  }
